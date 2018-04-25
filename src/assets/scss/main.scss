@@ -75,6 +75,9 @@ hr {
     margin-right: auto;
     border-style: inset;
     border-width: 1px;
+    width : 25px;
+    margin : 0;
+    margin-left : 32px;
 } 
 
 
@@ -107,7 +110,6 @@ hr {
     height: 100%;
     width: 150px;
     position: fixed;
-    z-index: -999;
     top: 0;
     left: 0;
     background-color: transparent;

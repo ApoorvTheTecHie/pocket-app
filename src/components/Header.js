@@ -52,6 +52,7 @@ export default class Header extends Component {
 						<Navbar.Brand>
 							<a href="#home"><Image className="logoStyle" src="https://png.icons8.com/color/1600/get-pocket.png"/> pocket</a>
 						</Navbar.Brand>
+						<Navbar.Toggle />
 					</Navbar.Header>
 					<Nav style={{ paddingBottom : '0px'}}>
 						<NavItem className="underLine" eventKey={1} href="#">
@@ -61,7 +62,7 @@ export default class Header extends Component {
 							<label className="textStyle">Recommended</label>
 						</NavItem>
 						<NavItem className="underLine" eventKey={2} href="#">
-							<label className="textStyle">Explore</label>
+							<label className="textStyle">Explore <i className="fas fa-angle-right"></i></label>
     					</NavItem>
 					</Nav>
 				
@@ -113,11 +114,14 @@ export default class Header extends Component {
 				{/* SideNav Design */}
 
 				<div className="sidenav">
-					<a href="#"><p style={{ color: '#a6a6a6'}}>My List</p></a>
+					<Link to="#"><p style={{ color: '#a6a6a6'}}>My List</p></Link>
 					<a href="#"><p style={{ color: 'black' }}>Favorites</p></a>
 					<a href="#"><p style={{ color: 'black' }}>Archive</p></a>
 					<hr />
-					<a href="#">Contact</a>
+					<a href="#">Articles</a>
+					<a href="#">Videos</a>
+					<a href="#">Images</a>
+					<a href="#">Tags</a>
 				</div>
 
 

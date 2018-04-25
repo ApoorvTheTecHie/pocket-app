@@ -6,6 +6,7 @@ import { Route, Redirect, Switch, BrowserRouter } from 'react-router-dom';
 import createBrowserHistory from 'history/createBrowserHistory';
 import {
 	Home,
+	MyList
 } from '../../containers';
 import { isLoggedIn } from '../../utils';
 import { Header , Footer } from '../../components'
@@ -36,7 +37,7 @@ const PublicRoute = ({ component: Component, ...rest }) => {
     	<div>
     		<Header {...props} />
     		<Component {...props}/>
-    		<Footer {...props} />
+    		{/* <Footer {...props} /> */}
     	</div>
     )
 	}}/>
@@ -50,6 +51,7 @@ const RoutesComponent = () => {
 				<div>
 	  				<Switch>
 						<PublicRoute exact path="/" component={Home} />
+						<PublicRoute exact path="/mylist" component={MyList} />
 					</Switch>
 				</div>
 			</BrowserRouter>
