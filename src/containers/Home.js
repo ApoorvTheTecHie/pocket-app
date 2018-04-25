@@ -10,15 +10,17 @@ import {
 import { Link } from 'react-router-dom';
 import {assetsPrefix} from '../constants';
 import {push} from 'react-router-redux';
+import { actions } from '../actions';
 import { 
 	IconDisplay 
 } from '../components';
-
+import { connect } from 'react-redux';
 import {
 	MyList
 } from '../containers';
 
-export default class Home extends Component {
+
+export default class Home extends Component {	
 
 	render() {
 		return(

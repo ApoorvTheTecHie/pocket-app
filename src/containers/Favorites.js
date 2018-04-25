@@ -3,9 +3,9 @@ import {
     Grid,
     Row,
     Col
-} from 'react-bootstrap';
+}from 'react-bootstrap';
 import { IconDisplay } from '../components';
-export default class Recommended extends Component{
+export default class Favorites extends Component {
     render(){
         return(
             <Grid>
@@ -16,7 +16,7 @@ export default class Recommended extends Component{
                     <Col xs={12} sm={12} md={12} className="text-center">
                         <Row>
                             <Col md={4} xs={12} lg={4} sm={6}>
-                                <h1>Recommended</h1>
+                                <h1>Favorites</h1>
                             </Col>
                         </Row>
                     </Col>

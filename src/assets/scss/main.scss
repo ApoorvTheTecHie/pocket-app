@@ -57,7 +57,9 @@ h5{
     color: cyan;
 }
 
-
+a:hover{
+    text-decoration: none;
+}
 
 @media only screen and (max-width: 800px) {
     .nav>li {
