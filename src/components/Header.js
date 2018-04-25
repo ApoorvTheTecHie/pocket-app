@@ -47,19 +47,23 @@ export default class Header extends Component {
 			/* NavBar Design */
 
 			<Grid className="fullWidth">
-				<Navbar collapseOnSelect fixedTop className="borderColor" >
+				<Navbar 
+					collapseOnSelect 
+					fixedTop 
+					className="borderColor" 
+				>
 					<Navbar.Header>
 						<Navbar.Brand>
-							<a href="#home"><Image className="logoStyle" src="https://png.icons8.com/color/1600/get-pocket.png"/> pocket</a>
+							<Link to="/"><Image className="logoStyle" src="https://png.icons8.com/color/1600/get-pocket.png"/> pocket</Link>
 						</Navbar.Brand>
 						<Navbar.Toggle />
 					</Navbar.Header>
 					<Nav style={{ paddingBottom : '0px'}}>
 						<NavItem className="underLine" eventKey={1} href="#">
-							<label className="textStyle">Home</label>
+							<Link to="/"><label className="textStyle">Home</label></Link>
     					</NavItem>
 						<NavItem className="underLine" eventKey={2} href="#">
-							<label className="textStyle">Recommended</label>
+							<label className="textStyle"><Link to="/recommended">Recommended</Link></label>
 						</NavItem>
 						<NavItem className="underLine" eventKey={2} href="#">
 							<label className="textStyle">Explore <i className="fas fa-angle-right"></i></label>
@@ -114,8 +118,8 @@ export default class Header extends Component {
 				{/* SideNav Design */}
 
 				<div className="sidenav">
-					<Link to="#"><p style={{ color: '#a6a6a6'}}>My List</p></Link>
-					<a href="#"><p style={{ color: 'black' }}>Favorites</p></a>
+					<Link to="/"><p style={{ color: '#a6a6a6'}}>My List</p></Link>
+					<Link to="/favorites"><p style={{ color: 'black' }}>Favorites</p></Link>
 					<a href="#"><p style={{ color: 'black' }}>Archive</p></a>
 					<hr />
 					<a href="#">Articles</a>

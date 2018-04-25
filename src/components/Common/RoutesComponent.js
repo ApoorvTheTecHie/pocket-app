@@ -6,7 +6,8 @@ import { Route, Redirect, Switch, BrowserRouter } from 'react-router-dom';
 import createBrowserHistory from 'history/createBrowserHistory';
 import {
 	Home,
-	MyList
+	Recommended,
+	Favorites
 } from '../../containers';
 import { isLoggedIn } from '../../utils';
 import { Header , Footer } from '../../components'
@@ -51,7 +52,8 @@ const RoutesComponent = () => {
 				<div>
 	  				<Switch>
 						<PublicRoute exact path="/" component={Home} />
-						<PublicRoute exact path="/mylist" component={MyList} />
+						<PublicRoute exact path="/favorites" component={Favorites} />
+						<PublicRoute exact path="/recommended" component={Recommended} />
 					</Switch>
 				</div>
 			</BrowserRouter>
