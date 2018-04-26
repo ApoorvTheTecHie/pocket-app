@@ -5,4 +5,6 @@ export App from './App';
 export Home from './Home';
 export Favorites from './Favorites';
 export MyList from './MyList';
-export Recommended from './Recommended'
+export Recommended from './Recommended';
+export Archive from './Archive';
+export Articles from './Articles';

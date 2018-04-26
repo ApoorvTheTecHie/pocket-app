@@ -7,7 +7,9 @@ import createBrowserHistory from 'history/createBrowserHistory';
 import {
 	Home,
 	Recommended,
-	Favorites
+	Favorites,
+	Archive,
+	Articles
 } from '../../containers';
 import { isLoggedIn } from '../../utils';
 import { Header , Footer } from '../../components'
@@ -54,6 +56,8 @@ const RoutesComponent = () => {
 						<PublicRoute exact path="/" component={Home} />
 						<PublicRoute exact path="/favorites" component={Favorites} />
 						<PublicRoute exact path="/recommended" component={Recommended} />
+						<PublicRoute exact path="/archive" component={Archive} />
+						<PublicRoute exact path="/articles" component={Articles} />
 					</Switch>
 				</div>
 			</BrowserRouter>

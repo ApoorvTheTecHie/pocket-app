@@ -82,7 +82,18 @@ hr {
     margin-left : 32px;
 } 
 
+.open>.dropdown-menu {
+    display: block;
+}
 
+.dropdown-menu {
+    margin-left : -120px;
+}
+
+
+.listSpacing{
+    padding : 10px;
+}
 
 /* hr{ 
   
