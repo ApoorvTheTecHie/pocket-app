@@ -99,11 +99,11 @@ export default class Header extends Component {
 						</NavItem> 
 						<NavDropdown style={{ padding : 0}} eventKey={3} title="Apoorv" id="basic-nav-dropdown">
 							<MenuItem eventKey={3.1}>
-								<Image
+								<Link to="/editprofile"><Image
 									className="logoStyleDropDown"
 									src="https://openclipart.org/image/2400px/svg_to_png/211821/matt-icons_preferences-desktop-personal.png" 
 									circle 
-								/>
+								/></Link>
 								<h5><strong>Apoorv Singh</strong></h5>
 								<p className="viewProfile">View Profile</p>
 							</MenuItem>
