@@ -8,3 +8,6 @@ export MyList from './MyList';
 export Recommended from './Recommended';
 export Archive from './Archive';
 export Articles from './Articles';
+export Videos from './Videos';
+export PocketImages from './PocketImages';
+export EditProfile from './EditProfile';

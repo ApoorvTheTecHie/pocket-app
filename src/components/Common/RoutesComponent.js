@@ -9,7 +9,10 @@ import {
 	Recommended,
 	Favorites,
 	Archive,
-	Articles
+	Articles,
+	Videos,
+	PocketImages,
+	EditProfile
 } from '../../containers';
 import { isLoggedIn } from '../../utils';
 import { Header , Footer } from '../../components'
@@ -46,6 +49,19 @@ const PublicRoute = ({ component: Component, ...rest }) => {
 	}}/>
 }
 
+const PublicRouteNoHeader = ({ component: Component, ...rest }) => {
+
+	return <Route {...rest} render={props => {
+
+		return (
+			<div>
+				<Component {...props} />
+				{/* <Footer {...props} /> */}
+			</div>
+		)
+	}} />
+}
+
 
 const RoutesComponent = () => {
 	return(
@@ -58,6 +74,9 @@ const RoutesComponent = () => {
 						<PublicRoute exact path="/recommended" component={Recommended} />
 						<PublicRoute exact path="/archive" component={Archive} />
 						<PublicRoute exact path="/articles" component={Articles} />
+						<PublicRoute exact path="/videos" component={Videos} />
+						<PublicRoute exact path="/images" component={PocketImages} />
+						<PublicRouteNoHeader exact path="/editprofile" component={EditProfile} />
 					</Switch>
 				</div>
 			</BrowserRouter>
