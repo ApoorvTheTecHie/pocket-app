@@ -123,9 +123,9 @@ export default class Header extends Component {
 					<Link to="/archive"><p style={{ color: 'black' }}>Archive</p></Link>
 					<hr />
 					<Link to="/articles">Articles</Link>
-					<a href="#">Videos</a>
-					<a href="#">Images</a>
-					<a href="#">Tags</a>
+					<Link to="/videos">Videos</Link>
+					<Link to="/images">Images</Link>
+					<a href="#">Tags <i className="fas fa-angle-right"></i></a>
 				</div>
 
 

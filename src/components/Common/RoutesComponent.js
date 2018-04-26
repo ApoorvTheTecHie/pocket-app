@@ -9,7 +9,9 @@ import {
 	Recommended,
 	Favorites,
 	Archive,
-	Articles
+	Articles,
+	Videos,
+	PocketImages
 } from '../../containers';
 import { isLoggedIn } from '../../utils';
 import { Header , Footer } from '../../components'
@@ -58,6 +60,8 @@ const RoutesComponent = () => {
 						<PublicRoute exact path="/recommended" component={Recommended} />
 						<PublicRoute exact path="/archive" component={Archive} />
 						<PublicRoute exact path="/articles" component={Articles} />
+						<PublicRoute exact path="/videos" component={Videos} />
+						<PublicRoute exact path="/images" component={PocketImages} />
 					</Switch>
 				</div>
 			</BrowserRouter>
