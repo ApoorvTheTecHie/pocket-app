@@ -63,7 +63,7 @@ export default class Header extends Component {
 							<Link to="/"><label className="textStyle">Home</label></Link>
     					</NavItem>
 						<NavItem className="underLine" eventKey={2} href="#">
-							<label className="textStyle"><Link to="/recommended">Recommended</Link></label>
+							<Link to="/recommended"><label className="textStyle">Recommended</label></Link>
 						</NavItem>
 						<NavItem className="underLine" eventKey={2} href="#">
 							<label className="textStyle">Explore <i className="fas fa-angle-right"></i></label>
@@ -120,9 +120,9 @@ export default class Header extends Component {
 				<div className="sidenav">
 					<Link to="/"><p style={{ color: '#a6a6a6'}}>My List</p></Link>
 					<Link to="/favorites"><p style={{ color: 'black' }}>Favorites</p></Link>
-					<a href="#"><p style={{ color: 'black' }}>Archive</p></a>
+					<Link to="/archive"><p style={{ color: 'black' }}>Archive</p></Link>
 					<hr />
-					<a href="#">Articles</a>
+					<Link to="/articles">Articles</Link>
 					<a href="#">Videos</a>
 					<a href="#">Images</a>
 					<a href="#">Tags</a>
