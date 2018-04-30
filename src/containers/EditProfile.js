@@ -20,7 +20,7 @@ export default class EditProfile extends Component{
                             <Image className="logoStyleEditPage" src="https://png.icons8.com/color/1600/get-pocket.png" />
                             <label style={{ fontSize : '25px'}}>pocket</label>
                         </Link>
-                        <label style={{ float : 'right'}}> Edit </label>                        
+                        <Link to="/editaccount"><label style={{ float : 'right'}}> Edit </label></Link>                        
                     </Col>
                 </Row>
                 <Row>
