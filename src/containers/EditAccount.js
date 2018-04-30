@@ -9,7 +9,12 @@ import {
     MenuItem,
     Image,
     Row,
-    Col
+    Col,
+    FormGroup,
+    ControlLabel,
+    FormControl,
+    Form,
+    Button
 }from 'react-bootstrap';
 import { Link } from 'react-router-dom';
 
@@ -18,12 +23,25 @@ export default class EditAccount extends Component{
         super(props);
         this.state = {
             user : {
-                email : 'test@test.com'
+                email : 'test@test.com',
+                password : '2142423534'
             }
         }
     }
+
+    onChange = (key, e) => {
+        let { user } = this.state;
+        user[key] = e.target.value;
+        this.setState({ user });
+    }
+
+    onSubmit = ( e ) => {
+        e.preventDefault();
+        console.log(this.state.user);
+    }
+
     render(){
-        const { email } = this.state.user;
+        const { email, password } = this.state.user;
         return(
             <Grid style={{ padding : '0'}}>
                 <Navbar style={{ boxShadow: '0px 0px 5px rgba(0,0,0,0.15)' }}>
@@ -53,22 +71,59 @@ export default class EditAccount extends Component{
                         </NavItem>
                     </Nav>
                 </Navbar>
-                <Row>
-                    <Col md={12} lg={12} xs={12} sm={12} style={{ paddingLeft : '2%'}}>               
-                        <Col md={4} lg={4} xs={12} sm={12}>
-                            srgujroiguroigrpso
-                        </Col>
-                
-                        <Col md={6} lg={6} xs={12} sm={12}>
-                            <Well>
-                                <h3 style={{ padding : '5px'}}> Edit Profile </h3>
-                               <p>Your primary email is : {email}</p>
-                               <p>Note: You can have more than one email associated with your account,
-                               <Link to="/">click here to manage all associated emails.</Link></p>
-                            </Well>
-                        </Col>
+               
+                <Col md={12} lg={12} xs={12} sm={12} style={{ paddingLeft : '2%'}}>               
+                    <Col md={4} lg={4} xs={12} sm={12}>
+                        srgujroiguroigrpso
                     </Col>
-                </Row>
+                    <Col md={6} lg={6} xs={12} sm={12}>
+                        <Well>
+                            <h3 style={{ padding : '5px'}}> Edit Profile </h3>
+                            <h4>Your primary email is : {email}</h4>
+                            <p>Note: You can have more than one email associated with your account,
+                                <Link to="/">click here to manage all associated emails.</Link>
+                            </p>
+                            <Link to="/"><p>Change Primary Email</p></Link>
+                            <Link to="/"><p>Change Password</p></Link>
+                            <Link to="/"><p>Change Username</p></Link>
+                            <Form horizontal onSubmit = {this.onSubmit}>
+                                <FormGroup controlId="formHorizontalEmail">
+                                    <Col componentClass={ControlLabel} sm={2}>
+                                        Email
+                                    </Col>
+                                    <Col sm={10}>
+                                        <FormControl
+                                            value={email}
+                                            onChange={this.onChange.bind(this, "email")}
+                                            type="email" 
+                                            placeholder="Email" />
+                                    </Col>
+                                </FormGroup>
+
+                                <FormGroup controlId="formHorizontalPassword">
+                                    <Col componentClass={ControlLabel} sm={2}>
+                                        Password
+                                    </Col>
+                                    <Col sm={10}>
+                                        <FormControl 
+                                            value={password}
+                                            onChange={this.onChange.bind(this, "password")}
+                                            type="password" 
+                                            placeholder="Password" />
+                                    </Col>
+                                </FormGroup>
+                                <FormGroup>
+                                    <Col smOffset={2} sm={10}>
+                                        <Button
+                                            bsStyle="danger" 
+                                            type="submit"
+                                            >Save Changes</Button>
+                                    </Col>
+                                </FormGroup>
+                            </Form>    
+                        </Well>
+                    </Col>
+                </Col>   
             </Grid>    
         );
     }
