@@ -31,7 +31,11 @@ export default class MyList extends Component{
         return(
             <Grid>
                 <h1>My List</h1>
-                <CardComponent pressed={pressed} onClickIconStar={this.onClickIconStar} onClickIconFill={this.onClickIconFill} />
+                <CardComponent 
+                    pressed={pressed} 
+                    onClickIconStar={this.onClickIconStar} 
+                    onClickIconFill={this.onClickIconFill} 
+                />
             </Grid>
         );
     }

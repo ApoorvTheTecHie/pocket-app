@@ -12,7 +12,8 @@ import {
 	Articles,
 	Videos,
 	PocketImages,
-	EditProfile
+	EditProfile,
+	EditAccount
 } from '../../containers';
 import { isLoggedIn } from '../../utils';
 import { Header , Footer } from '../../components'
@@ -77,6 +78,7 @@ const RoutesComponent = () => {
 						<PublicRoute exact path="/videos" component={Videos} />
 						<PublicRoute exact path="/images" component={PocketImages} />
 						<PublicRouteNoHeader exact path="/editprofile" component={EditProfile} />
+						<PublicRouteNoHeader exact path="/editaccount" component={EditAccount} />
 					</Switch>
 				</div>
 			</BrowserRouter>
