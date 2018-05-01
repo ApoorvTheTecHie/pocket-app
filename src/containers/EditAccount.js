@@ -17,7 +17,7 @@ import {
     Button
 }from 'react-bootstrap';
 import { Link } from 'react-router-dom';
-
+import { SideNavEditAccount } from '../components';
 export default class EditAccount extends Component{
     constructor(props){
         super(props);
@@ -57,16 +57,16 @@ export default class EditAccount extends Component{
                         </Navbar.Brand>
                     </Navbar.Header>
                     <Nav pullRight>
-                        <NavItem eventKey={1} href="#">
+                        <NavItem eventKey={1} href="/">
                             How to Save
                         </NavItem>
-                        <NavItem eventKey={2} href="#">
+                        <NavItem eventKey={2} href="/">
                             Go Premium
                         </NavItem>
-                        <NavItem eventKey={3} href="#">
+                        <NavItem eventKey={3} href="/">
                             Support 
                         </NavItem>
-                        <NavItem eventKey={4} href="#">
+                        <NavItem eventKey={4} href="/">
                             My List
                         </NavItem>
                     </Nav>
@@ -74,7 +74,7 @@ export default class EditAccount extends Component{
                
                 <Col md={12} lg={12} xs={12} sm={12} style={{ paddingLeft : '2%'}}>               
                     <Col md={4} lg={4} xs={12} sm={12}>
-                        srgujroiguroigrpso
+                       <SideNavEditAccount email={email} />
                     </Col>
                     <Col md={6} lg={6} xs={12} sm={12}>
                         <Well>
