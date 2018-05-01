@@ -16,7 +16,7 @@ const CardComponent = (props) => {
                 <p style={{ fontSize : '20px'}}>The secret lives of tumbler teens</p>
                 <Image
                     style={{ width : '250px'}}
-                    src="http://static.guim.co.uk/sys-images/Guardian/Pix/pictures/2014/4/11/1397210130748/Spring-Lamb.-Image-shot-2-011.jpg"
+                    src="https://www.gettyimages.in/gi-resources/images/Embed/new/embed2.jpg"
                 />
                 <Col style={{ marginTop : '10px', display : 'flex', justifyContent : 'space-around'}}>
                     <i className="fas fa-share"></i>
