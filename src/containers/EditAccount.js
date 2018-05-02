@@ -87,10 +87,12 @@ export default class EditAccount extends Component{
                                 <p style={{ marginBottom : '20px'}}>Note: You can have more than one email associated with your account,
                                     <Link to="/">click here to manage all associated emails.</Link>
                                 </p>
-                                <Link to="/"><p>Change Primary Email</p></Link>
-                                <Link to="/"><p>Change Password</p></Link>
-                                <Link to="/"><p>Change Username</p></Link>
-                                <Form horizontal onSubmit = {this.onSubmit}>
+                                <div style={{ marginTop : '100px'}}> 
+                                    <Link to="/"><p>Change Primary Email</p></Link>
+                                    <Link to="/"><p>Change Password</p></Link>
+                                    <Link to="/"><p>Change Username</p></Link>
+                                </div>    
+                                <Form horizontal onSubmit = {this.onSubmit} style={{ marginTop : '100px'}}>
                                     <FormGroup controlId="formHorizontalEmail">
                                         <Col componentClass={ControlLabel} sm={2}>
                                             Email

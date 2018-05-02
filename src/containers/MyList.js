@@ -4,38 +4,32 @@ import {
     Row,
     Col
 } from 'react-bootstrap';
-import { CardComponent } from '../components';
+import CardListComponent from '../components/CardListComponent';
 
 export default class MyList extends Component{
     constructor(props){
         super(props);
-        this.state = {
-            pressed : false
-        }
     }
-
-    onClickIconStar = () => {
-        this.setState({ pressed : true})
-        alert('Added to favorites')
-    }
-
-    onClickIconFill = () => {
-        this.setState({ pressed: false })
-        alert('Removed from favorites')
-    }
-
     render(){
-        const { pressed } = this.state;
-        console.log(pressed);
-        
+        const myList = [
+            {
+                title: 'React State vs Props explained',
+                image: 'https://picsum.photos/200/300/?random'
+            }, {
+                title: 'React State vs Props explained',
+                image: 'https://picsum.photos/200/300'
+            }, {
+                title: 'React State vs Props explained',
+                image: 'https://picsum.photos/200/300'
+            }, {
+                title: 'React State vs Props explained',
+                image: 'https://picsum.photos/200/300'
+            }
+        ]
         return(
             <Grid>
                 <h1>My List</h1>
-                <CardComponent 
-                    pressed={pressed} 
-                    onClickIconStar={this.onClickIconStar} 
-                    onClickIconFill={this.onClickIconFill} 
-                />
+                    <CardListComponent list={myList} />
             </Grid>
         );
     }

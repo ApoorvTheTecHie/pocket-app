@@ -4,11 +4,11 @@ import {
 } from 'react-bootstrap';
 import CardComponent from './CardComponent';
 
-const CardListComponent = () => {
+const CardListComponent = ({list} ) => {
     return(
         <Grid>
-            {Array[2].map((index) => {
-                <CardComponent key={index} />
+            {list.map((card, index) => {
+                return <CardComponent key={index} card={card} />
             })}        
         </Grid>
     );
