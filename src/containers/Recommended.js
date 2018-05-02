@@ -11,16 +11,42 @@ import CardComponent from '../components/CardComponent';
 const recommendationList = [
     {
         title: 'React State vs Props explained',
-        image: 'https://picsum.photos/200/300'
+        image: 'https://picsum.photos/200/300/?random'
     }, {
         title: 'React State vs Props explained',
-        image: 'https://picsum.photos/200/300'
+        image: 'https://picsum.photos/200/300/?random'
     }, {
         title: 'React State vs Props explained',
-        image: 'https://picsum.photos/200/300'
+        image: 'https://picsum.photos/200/300/?random'
     }, {
         title: 'React State vs Props explained',
-        image: 'https://picsum.photos/200/300'
+        image: 'https://picsum.photos/200/300/?random'
+    },
+    {
+        title: 'React State vs Props explained',
+        image: 'https://picsum.photos/200/300/?random'
+    }, {
+        title: 'React State vs Props explained',
+        image: 'https://picsum.photos/200/300/?random'
+    }, {
+        title: 'React State vs Props explained',
+        image: 'https://picsum.photos/200/300/?random'
+    }, {
+        title: 'React State vs Props explained',
+        image: 'https://picsum.photos/200/300/?random'
+    },
+    {
+        title: 'React State vs Props explained',
+        image: 'https://picsum.photos/200/300/?random'
+    }, {
+        title: 'React State vs Props explained',
+        image: 'https://picsum.photos/200/300/?random'
+    }, {
+        title: 'React State vs Props explained',
+        image: 'https://picsum.photos/200/300/?random'
+    }, {
+        title: 'React State vs Props explained',
+        image: 'https://picsum.photos/200/300/?random'
     }
 ]
 
