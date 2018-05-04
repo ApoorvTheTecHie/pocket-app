@@ -13,7 +13,9 @@ import {
 	Videos,
 	PocketImages,
 	EditProfile,
-	EditAccount
+	EditAccount,
+	NotFoundPage,
+	Login
 } from '../../containers';
 import { isLoggedIn } from '../../utils';
 import { Header , Footer } from '../../components'
@@ -77,6 +79,8 @@ const RoutesComponent = () => {
 						<PublicRoute exact path="/articles" component={Articles} />
 						<PublicRoute exact path="/videos" component={Videos} />
 						<PublicRoute exact path="/images" component={PocketImages} />
+						<PublicRoute exact path="/notfound" component={NotFoundPage} />
+						<PublicRouteNoHeader exact path="/login" component={Login} />
 						<PublicRouteNoHeader exact path="/editprofile" component={EditProfile} />
 						<PublicRouteNoHeader exact path="/editaccount" component={EditAccount} />
 					</Switch>

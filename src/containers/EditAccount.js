@@ -122,7 +122,9 @@ export default class EditAccount extends Component{
                                             <Button
                                                 bsStyle="danger" 
                                                 type="submit"
-                                                >Save Changes</Button>
+                                            >
+                                                Save Changes
+                                            </Button>
                                         </Col>
                                     </FormGroup>
                                 </Form>    

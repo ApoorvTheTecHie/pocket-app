@@ -12,3 +12,5 @@ export Videos from './Videos';
 export PocketImages from './PocketImages';
 export EditProfile from './EditProfile';
 export EditAccount from './EditAccount';
+export NotFoundPage from './NotFoundPage';
+export Login from './Auth/Login'
