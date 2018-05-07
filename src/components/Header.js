@@ -109,8 +109,8 @@ export default class Header extends Component {
 							</MenuItem>
 							<MenuItem eventKey={3.2}><i className="fas fa-certificate"></i> &nbsp;Premium</MenuItem>
 							<MenuItem eventKey={3.3}><i className="fas fa-question-circle"></i> &nbsp;Help</MenuItem>
-							<MenuItem eventKey={3.3}><i className="fas fa-cog"></i> &nbsp;Options</MenuItem>
-							<MenuItem eventKey={3.3}><i className="fas fa-sign-out-alt"></i> &nbsp;Logout</MenuItem>
+							<MenuItem eventKey={3.4}><i className="fas fa-cog"></i> &nbsp;Options</MenuItem>
+							<MenuItem eventKey={3.5}><i className="fas fa-sign-out-alt"></i> &nbsp;Logout</MenuItem>
 						</NavDropdown>
 					</Nav>
 				</Navbar>
