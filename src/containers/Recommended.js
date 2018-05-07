@@ -8,6 +8,8 @@ import { IconDisplay } from '../components';
 import CardListComponent from '../components/CardListComponent';
 import CardComponent from '../components/CardComponent';
 
+/* Random Data / Mock Data */
+
 const recommendationList = [
     {
         title: 'React State vs Props explained',

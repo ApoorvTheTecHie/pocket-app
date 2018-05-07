@@ -15,7 +15,8 @@ import {
 	EditProfile,
 	EditAccount,
 	NotFoundPage,
-	Login
+	Login,
+	Signup
 } from '../../containers';
 import { isLoggedIn } from '../../utils';
 import { Header , Footer } from '../../components'
@@ -83,6 +84,7 @@ const RoutesComponent = () => {
 						<PublicRouteNoHeader exact path="/login" component={Login} />
 						<PublicRouteNoHeader exact path="/editprofile" component={EditProfile} />
 						<PublicRouteNoHeader exact path="/editaccount" component={EditAccount} />
+						<PublicRouteNoHeader exact path="/signup" component={Signup} />
 					</Switch>
 				</div>
 			</BrowserRouter>
