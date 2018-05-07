@@ -43,8 +43,18 @@ export default class Signup extends Component{
     }
 
     onClear = (e) => {
-        this.setState({ user : ''})
+        e.preventDefault();
+        let { user } = this.state;
+        this.setState({
+           user: {
+               name: '',
+               email: '',
+               password: '',
+               confirmPassword: ''
+           }
+        });
     }
+
 
     render(){
 
@@ -84,7 +94,7 @@ export default class Signup extends Component{
                     <h2 style={{ textAlign: 'center', fontWeight: '700' }}>Sign Up</h2>
                     <Form horizontal onSubmit={this.onSubmit}>
                         <FormGroup controlId="formHorizontalName">
-                            <Col sm={10} style={{ marginLeft: '20px', marginTop: '10px' }}>
+                            <Col sm={10} style={{ width : '500px', marginLeft: '20px', marginTop: '10px' }}>
                                 <FormControl
                                     value={user.name}
                                     onChange={this.onChange.bind(this, "name")}
@@ -95,7 +105,7 @@ export default class Signup extends Component{
                             </Col>
                         </FormGroup>
                         <FormGroup controlId="formHorizontalEmail">
-                            <Col sm={10} style={{ marginLeft: '20px', marginTop: '10px' }}>
+                            <Col sm={10} style={{ width: '500px', marginLeft: '20px', marginTop: '10px' }}>
                                 <FormControl
                                     value={user.email}
                                     onChange={this.onChange.bind(this, "email")}
@@ -105,7 +115,7 @@ export default class Signup extends Component{
                             </Col>
                         </FormGroup>
                         <FormGroup controlId="formHorizontalPassword">
-                            <Col sm={10} style={{ marginLeft: '20px', marginTop: '10px' }}>
+                            <Col sm={10} style={{ width: '500px', marginLeft: '20px', marginTop: '10px' }}>
                                 <FormControl
                                     value={user.password}
                                     onChange={this.onChange.bind(this, "password")}
@@ -116,7 +126,7 @@ export default class Signup extends Component{
                             </Col>
                         </FormGroup>
                         <FormGroup controlId="formHorizontalConfirmPassword">
-                            <Col sm={10} style={{ marginLeft: '20px', marginTop: '10px' }}>
+                            <Col sm={10} style={{ width: '500px', marginLeft: '20px', marginTop: '10px' }}>
                                 <FormControl
                                     value={user.confirmPassword}
                                     onChange={this.onChange.bind(this, "confirmPassword")}
@@ -127,12 +137,16 @@ export default class Signup extends Component{
                             </Col>
                         </FormGroup>
                     
-                    <p style={{textAlign : 'center'}}>OR</p>
+                    
                     <Button
                         type="submit"
                         style={{ width: '100%' }} 
                         bsStyle="danger">
                             Sign Up
+                    </Button>
+                    <Button
+                        style={{ marginTop : '1em',width: '100%' }} 
+                        onClick={this.onClear}>Clear
                     </Button>
                     <Link to="/login">
                         <p style={{ textAlign: 'center' }}>Sign In</p>

@@ -15,15 +15,19 @@ import {
 	MenuItem, 
 	Tooltip, 
 	ButtonToolbar,
-	OverlayTrigger 
+	OverlayTrigger ,
+	Modal
 } from 'react-bootstrap';
-import { connect } from 'react-redux';
 
 export default class Header extends Component {
-
-
+	constructor(props){
+		super(props);
+		this.state = {
+			showModal : false
+		}
+	}
 	render () {
-
+		const { showModal } = this.state;
 		const tooltipEnvelope = (
 			<Tooltip id="tooltip">
 				View Inbox
@@ -79,7 +83,9 @@ export default class Header extends Component {
 							</OverlayTrigger>	
 
 							<OverlayTrigger placement="bottom" overlay={tooltipPlus}>
-								<Button style={{ border: '0' }} bsStyle="default">
+								<Button onClick={() => {
+									showModal ? this.setState({ showModal : false}) : this.setState({ showModal : true})
+								}} style={{ border: '0' }} bsStyle="default">
 									<i className="fas fa-plus textStyle"></i>
 								</Button>
 							</OverlayTrigger>
@@ -127,7 +133,17 @@ export default class Header extends Component {
 					<Link to="/images">Images</Link>
 					<a href="#">Tags <i className="fas fa-angle-right"></i></a>
 				</div>
-
+				<Modal show={showModal}>
+					<Modal.Header closeButton onClick={() => this.setState({ showModal: false })}>
+						<Modal.Title>Save an item to pocket</Modal.Title>
+					</Modal.Header>
+					<Modal.Body>
+						url : <input style={{ width : '90%'}} />
+					</Modal.Body>
+					<Modal.Footer>
+						<Button onClick={() => this.setState({ showModal : false})}>Close</Button>
+					</Modal.Footer>
+				</Modal>
 
 			</Grid>
 		);
