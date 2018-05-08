@@ -1,4 +1,3 @@
-
 import React, { Component } from 'react';
 import { Link } from 'react-router-dom';
 import { assetsPrefix } from '../constants';
@@ -133,6 +132,9 @@ export default class Header extends Component {
 					<Link to="/images">Images</Link>
 					<a href="#">Tags <i className="fas fa-angle-right"></i></a>
 				</div>
+
+				{/* Modal Element */}
+
 				<Modal show={showModal}>
 					<Modal.Header closeButton onClick={() => this.setState({ showModal: false })}>
 						<Modal.Title>Save an item to pocket</Modal.Title>
@@ -141,10 +143,13 @@ export default class Header extends Component {
 						url : <input style={{ width : '90%'}} />
 					</Modal.Body>
 					<Modal.Footer>
+						<Button onClick={() => {
+							this.setState({ showModal: false })
+							alert("URL added successfully")						
+						}}>Add</Button>
 						<Button onClick={() => this.setState({ showModal : false})}>Close</Button>
 					</Modal.Footer>
 				</Modal>
-
 			</Grid>
 		);
 	}
