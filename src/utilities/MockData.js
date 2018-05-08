@@ -5,19 +5,23 @@ export const myList = [
     {
         title: 'React State vs Props explained',
         image: 'https://picsum.photos/200/300/?random',
-        is_favorite: false
+        is_favorite: false,
+        type : 'article'
     }, {
         title: 'We will rock you',
         image: 'https://picsum.photos/200/300?image=6',
-        is_favorite: true
+        is_favorite: true,
+        type: 'video'
     }, {
         title: 'You will not walk alone',
-        image: 'https://picsum.photos/200/300?image=1',
-        is_favorite: true
+        image: 'https://picsum.photos/200/300?image=1084',
+        is_favorite: true,
+        type: 'article'
     }, {
         title: 'A random article',
         image: 'https://picsum.photos/200/300?image=0',
-        is_favorite: false
+        is_favorite: false,
+        type: 'video'
     }
 ];
 

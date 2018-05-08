@@ -8,8 +8,15 @@ import {
     i
 } from 'react-bootstrap';
 import IconDisplay from '../components/IconDisplay';
-import CardComponent from '../components/CardComponent';
+import CardListComponent from '../components/CardListComponent';
+import { myList } from '../utilities/MockData';
 export default class Articles extends React.Component{
+
+    checkType = ( videoData ) => {
+        videoData = myList.filter(list => list.type === 'article')
+        return videoData;
+    }
+
     render(){
         return(
             <Grid>
@@ -39,7 +46,7 @@ export default class Articles extends React.Component{
                         <Col xs={12} sm={12} md={12}>
                             <Row>
                                 <Col md={4} sm={6} xs={12} lg={4} style={{ display : 'flex', justifyContent : 'center'}}>
-                                    <CardComponent />
+                                <CardListComponent list = { this.checkType() }  />
                                 </Col>    
                            </Row>
                         </Col>

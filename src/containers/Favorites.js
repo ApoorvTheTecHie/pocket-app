@@ -5,10 +5,20 @@ import {
     Col
 }from 'react-bootstrap';
 import { IconDisplay } from '../components';
+import { myList } from '../utilities/MockData';
+import CardListComponent from '../components/CardListComponent';
 export default class Favorites extends Component {
+    constructor( props){
+        super(props);
+    }
+
+    favoriteDataList = ( favoriteData ) => {   
+        favoriteData = myList.filter( list => list.is_favorite);
+        return favoriteData;
+    }
+
     render(){
-        console.log(this.props);
-        
+        console.log(this.favoriteDataList())
         return(
             <Grid>
                 <Row style={{ margin: 120, height: '30vh', marginRight: '0' }}>
@@ -19,6 +29,7 @@ export default class Favorites extends Component {
                         <Row>
                             <Col md={4} xs={12} lg={4} sm={6}>
                                 <h1>Favorites</h1>
+                                <CardListComponent list ={this.favoriteDataList()} />
                             </Col>
                         </Row>
                     </Col>
