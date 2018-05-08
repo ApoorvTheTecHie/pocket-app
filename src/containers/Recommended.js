@@ -6,54 +6,12 @@ import {
 } from 'react-bootstrap';
 import { IconDisplay } from '../components';
 import CardListComponent from '../components/CardListComponent';
+import { recommendationList } from '../utilities/MockData';
 import CardComponent from '../components/CardComponent';
-
-/* Random Data / Mock Data */
-
-const recommendationList = [
-    {
-        title: 'React State vs Props explained',
-        image: 'https://picsum.photos/200/300/?random'
-    }, {
-        title: 'React State vs Props explained',
-        image: 'https://picsum.photos/200/300/?random'
-    }, {
-        title: 'React State vs Props explained',
-        image: 'https://picsum.photos/200/300/?random'
-    }, {
-        title: 'React State vs Props explained',
-        image: 'https://picsum.photos/200/300/?random'
-    },
-    {
-        title: 'React State vs Props explained',
-        image: 'https://picsum.photos/200/300/?random'
-    }, {
-        title: 'React State vs Props explained',
-        image: 'https://picsum.photos/200/300/?random'
-    }, {
-        title: 'React State vs Props explained',
-        image: 'https://picsum.photos/200/300/?random'
-    }, {
-        title: 'React State vs Props explained',
-        image: 'https://picsum.photos/200/300/?random'
-    },
-    {
-        title: 'React State vs Props explained',
-        image: 'https://picsum.photos/200/300/?random'
-    }, {
-        title: 'React State vs Props explained',
-        image: 'https://picsum.photos/200/300/?random'
-    }, {
-        title: 'React State vs Props explained',
-        image: 'https://picsum.photos/200/300/?random'
-    }, {
-        title: 'React State vs Props explained',
-        image: 'https://picsum.photos/200/300/?random'
-    }
-]
 
 export default class Recommended extends Component{
     render(){
+        console.log(recommendationList);
         
         return(
             <Grid>

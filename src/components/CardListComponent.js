@@ -6,7 +6,7 @@ import CardComponent from './CardComponent';
 
 const CardListComponent = ({list} ) => {
     return(
-        <Grid>
+        <Grid>  
             {list.map((card, index) => {
                 return <CardComponent key={index} card={card} />
             })}        

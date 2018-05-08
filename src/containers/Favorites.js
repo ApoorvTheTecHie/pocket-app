@@ -7,6 +7,8 @@ import {
 import { IconDisplay } from '../components';
 export default class Favorites extends Component {
     render(){
+        console.log(this.props);
+        
         return(
             <Grid>
                 <Row style={{ margin: 120, height: '30vh', marginRight: '0' }}>

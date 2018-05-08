@@ -15,6 +15,7 @@ const CardComponent = ({
     const {
         title = "",
         image = "",
+        is_favorite = ""
     } = card;
 
     return(
@@ -28,6 +29,11 @@ const CardComponent = ({
                 <Col style={{ marginTop : '10px', display : 'flex', justifyContent : 'space-around'}}>
                     <i className="fas fa-share"></i>
                     <i className="fas fa-check"></i>
+                    {is_favorite ? 
+                        <i className="fas fa-star"></i> 
+                    : 
+                        <i className="far fa-star"></i>
+                    }
                     <i className="fas fa-trash-alt"></i>
                     <i className="fas fa-tag"></i>
                 </Col>    
